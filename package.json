@@ -1,0 +1,19 @@
+{
+  "name": "users",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "nodemon --exec 'mocha -R min'",
+    "notes": "using nodemon instead of --watch which reruns the tests after change, but iffy compatibility with mongoose",
+    "notes2": "-R min are about the formatting of test output: condense down test output and clear out previous"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "mocha": "^8.3.2",
+    "mongoose": "^5.12.0",
+    "nodemon": "^2.0.7"
+  }
+}
