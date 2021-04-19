@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 const { Schema } = mongoose;
-const PostSchema = require('./postSchema');
+const PostSchema = require('./post');
 
 const UserSchema = new Schema({
   name: {
@@ -11,7 +11,14 @@ const UserSchema = new Schema({
     },
     required: [true, 'Name is required.'],
   },
+  // keeping this just for reference
   posts: [PostSchema],
+  blogPosts: [
+    {
+      type: Schema.Types.ObjectId,
+      ref: 'BlogPost',
+    },
+  ],
   likes: {
     type: Number,
     default: 0,
